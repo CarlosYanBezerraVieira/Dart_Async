@@ -1,5 +1,3 @@
-import '../2_futures/a_futures.dart';
-
 Future<void> main(List<String> args) async {
   /*
   processo1().then((mensagem) {
