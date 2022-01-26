@@ -1,5 +1,4 @@
-import 'package:dart_async/modelos/curso/cidade_curso.dart';
-import 'package:dart_async/modelos/curso/user.dart';
+import 'package:dart_async/7_modelos/curso/user.dart';
 import 'package:http/http.dart';
 
 import 'cidade_curso.dart';
