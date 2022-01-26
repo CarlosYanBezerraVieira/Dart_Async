@@ -1,10 +1,12 @@
 import 'dart:convert';
 
 import 'package:dart_async/modelos/cidade.dart';
+import 'package:dart_async/modelos/user.dart';
 import 'package:http/http.dart';
 
 void main(List<String> args) {
-  buscarCep();
+  // buscarCep();
+  buscarUser();
 }
 
 Future<void> buscarCep() async {
@@ -20,4 +22,13 @@ Future<void> buscarCep() async {
   print(cidade);
   print(cidade.toMap());
   print(cidade.toJson());
+}
+
+Future<void> buscarUser() async {
+  var url = "justexample";
+  var response = await get(Uri.parse(url));
+  if (response.statusCode == 200) {
+    var user = User.fromJson(response.body);
+    print(user);
+  }
 }
